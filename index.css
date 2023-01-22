@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #09090A;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 58px 20vw 0px 20vw;
+
+    position: fixed;
+    width: 100%;
+    background-color: #09090A;
+    
+}
+
+header button:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+button {
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: 1px solid #8B5CF6;
+    background-color: transparent;
+    color: white;
+
+    display: flex;
+    align-items: center; /* Só funciona após declarar o display:flex */
+    gap: 12px; /* Só funciona após declarar o display:flex */
+
+    
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+}
+
+#form-habits {
+    display: flex;
+    padding: 162px 48px 48px;
+    width: fit-content;
+}
+
+.habits {
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px; 
+}
+
+.habit { 
+    color: #A1A1AA;
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5vw;
+
+}
+
+.hour {
+    display: flex;
+    padding: 10px 10px 0px 0px;
+    font-size: 25px;
+    font-family: 'Roboto Mono';
+    line-height: 125%;
+}
+
+.days {
+    display: flex;
+    gap: 48px;
+    margin-left: 32px;
+    
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.day div {
+    margin-bottom: 8px;
+
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    line-height: 125%;
+
+    color: #A1A1AA;
+    text-align: center;
+}
+
+input {
+
+    appearance: none;
+    -webkit-appearance: none; /* prefixo para reforçar o appeareance: none para navegadores diferentes */
+
+    width: 64px;
+    height: 64px;
+    border: 2px solid #27272A;
+    border-radius: 8px;
+    background-color: #18181B;
+}
+
+/* Pseudo-selector*/
+input:checked {
+    background: #8B5CF6;
+    border:2px solid #A78BFA;
+}
+
+@media (max-width: 626px) {
+    button div {
+        display: none;
+    }
+}
+
+@media (max-width: 366px) {
+    button {
+        padding: 10px;
+        margin: 10px 0px 0px 30px;
+    }
+}
