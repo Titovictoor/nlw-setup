@@ -16,34 +16,53 @@
   </head>
   <body>
     <header>
-      <img src="./assets/logo.svg" alt="Logomarca do Aplicativo Habits" />
+      <div class="toggle">
+        <input type="checkbox" name="checkbox" id="checkbox" />
+        <label for="checkbox" class="icons">
+          <img src="https://img.icons8.com/color/48/null/sun-star.png" />~
+          <img
+            src="data:image/png;base64,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"
+          />
+          <div class="ball"></div>
+        </label>
+      </div>
       <button>
         <img src="./assets/plus.svg" alt="ícone sinal de mais roxo" />
         <div>Registrar meu dia</div>
       </button>
+
+      <img src="./assets/logo.svg" alt="Logomarca do Aplicativo Habits" />
     </header>
 
     <form id="form-habits">
       <div class="habits">
         <div class="habit" data-name="wakeup">
           ⏰
-          <div class="hour">06:00</div>
+          <div class="hour">6:00</div>
         </div>
         <div class="habit" data-name="fruit">
           🍎
-          <div class="hour">06:15</div>
+          <div class="hour">6:15</div>
         </div>
         <div class="habit" data-name="gym">
           🏋️‍♀️
-          <div class="hour">06:30</div>
+          <div class="hour">6:30</div>
         </div>
         <div class="habit" data-name="water">
           🚿
-          <div class="hour">07:15</div>
+          <div class="hour">7:15</div>
+        </div>
+        <div class="habit">
+          💻
+          <div class="hour">7:30</div>
         </div>
         <div class="habit" data-name="studing">
           📚
           <div class="hour">18:00</div>
+        </div>
+        <div class="habit">
+          💤
+          <div class="hour">22:30</div>
         </div>
       </div>
 
@@ -52,5 +71,6 @@
 
     <script src="https://cdn.jsdelivr.net/gh/maykbrito/libs/NLWSetup/source/NLWSetup.js"></script>
     <script src="./script.js"></script>
+    <script src="./toggle.js"></script>
   </body>
 </html>

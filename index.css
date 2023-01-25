@@ -5,28 +5,96 @@
 }
 
 body {
-    background-color: #09090A;
+    background-color: #cccccc;
     height: 100vh;
+
+    justify-content: center;
+}
+
+.toggle {
+    margin-top: 10px;
+}
+
+#checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.toggle img {
+    height: 35px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+
+    background-color: black;
+    cursor: pointer;
+    justify-content: space-evenly;
+
+    padding: 5px;
+    position: relative;
+    width: 100px;
+    height: 42px;
+    border-radius: 50px;
+}
+
+.ball {
+    background-color: #cccccc;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
+    transition: 0.3s linear;
+}
+
+#checkbox:checked + .icons .ball{
+    transform: translate(50px);
+}
+
+.dark {
+    background-color: #09090A;
+}
+
+body.dark header {
+    background-color: #09090A;
+}
+
+body.dark button div {
+    color:#8B5CF6;
+}
+
+body.dark form .hour {
+    color:#cccccc;
+}
+
+body.dark form input:checked {
+    background-color: #8B5CF6;
+    border-color: #8B5CF6;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 58px 20vw 0px 20vw;
+    padding: 58px 20vw 0px 16vw;
 
     position: fixed;
     width: 100%;
-    background-color: #09090A;
+    background-color: #cccccc;
     
 }
 
 header button:hover {
     cursor: pointer;
-    scale: 1.2;
 }
 
 button {
+    margin-right: 40%;
     padding: 16px 24px;
     border-radius: 8px;
     border: 1px solid #8B5CF6;
@@ -42,6 +110,10 @@ button {
     font-weight: 600;
     font-size: 16px;
     line-height: 125%;
+}
+
+button div {
+    color: #09090A;
 }
 
 #form-habits {
@@ -76,6 +148,7 @@ button {
     font-size: 25px;
     font-family: 'Roboto Mono';
     line-height: 125%;
+    color: #09090A;
 }
 
 .days {
@@ -89,6 +162,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    
 }
 
 .day div {
@@ -98,7 +172,7 @@ button {
     font-size: 20px;
     line-height: 125%;
 
-    color: #A1A1AA;
+    color: #09090A;
     text-align: center;
 }
 
@@ -109,9 +183,9 @@ input {
 
     width: 64px;
     height: 64px;
-    border: 2px solid #27272A;
+    border: 2px solid #666666;
     border-radius: 8px;
-    background-color: #18181B;
+    background-color: #a2a2a2;
 }
 
 /* Pseudo-selector*/
@@ -120,10 +194,33 @@ input:checked {
     border:2px solid #A78BFA;
 }
 
-@media (max-width: 626px) {
+@media (max-width: 1220px) {
+    header {
+    padding: 58px 20vw 0px 8vw;
+    }
+}
+
+@media (max-width: 1050px) {
+    button {
+         padding: 16px 4px;
+    }
+}
+
+@media (max-width: 956px) {
     button div {
         display: none;
     }
+
+    button {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 750px) {
+    .toggle {
+        margin-right: 25px;
+    }
+
 }
 
 @media (max-width: 366px) {
